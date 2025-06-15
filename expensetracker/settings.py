@@ -48,6 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'expensetracker.middleware.RequestLoggingMiddleware.RequestLogging',
 ]
 
 ROOT_URLCONF = 'expensetracker.urls'
@@ -71,6 +72,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'expensetracker.wsgi.application'
+
+
 
 
 # Database
