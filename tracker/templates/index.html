@@ -9,7 +9,16 @@
     
 </head>
 <body>
+
+{% extends "base.html" %}
+{% block start %} 
+
     <h1>Expense Tracker</h1>
+    <a class="btn" style="background-color: blue; width:80px"  href="{% url 'logout_view' %}" >Logout</a>
+    
+    {{request.user.first_name}}
+    {{request.user.last_name}}
+
     <div class="container">
       <div class="header">
         <img
@@ -65,14 +74,6 @@
     <div class="notification-container" id="notification">
       <p>Please add a description and amount</p>
     </div>
+ 
+{% endblock %}
 
-   {% if messages %}
-   <script>
-{% for message in messages %}
-alert('{{message}}')
-{% endfor %}
-    </script>  
-{% endif %}
-
-</body>
-</html>
